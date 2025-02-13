@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>День влюбленных</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="name">Поздравление моего котенка</h1>
+    </div>
+    <div class="container">
+      <div class="cards">
+        <div class="card" id="card2">
+          <h1 class="title">Ты выбираешь это?</h1>
+          <img src="pis.png" alt="" class="card-img2" />
+        </div>
+        <div class="slider-container">
+          <button class="nav-button up-button">&#8593;</button>
+          <div class="slider">
+            <img src="slider/slide1.jpg" alt="Фото 1" class="slide" />
+            <img src="slider/slide2.jpg" alt="Фото 2" class="slide" />
+            <img src="slider/slide3.jpg" alt="Фото 3" class="slide" />
+            <img src="slider/slide4.jpg" alt="Фото 3" class="slide" />
+            <img src="slider/slide5.jpg" alt="Фото 3" class="slide" />
+            <img src="slider/slide6.jpg" alt="Фото 3" class="slide" />
+            <img src="slider/slide7.jpg" alt="Фото 3" class="slide" />
+          </div>
+          <button class="nav-button down-button">&#8595;</button>
+        </div>
+
+        <div class="card" id="card">
+          <h1 class="title">Или это?</h1>
+          <img src="izo.png" alt="" class="card-img" />
+        </div>
+      </div>
+
+      <div id="modal2">
+        <div>
+          <button class="close-btn" id="close2">&times;</button>
+          <p class="text">
+            Котенок, с Днем Святого Валентина!!! Ты у меня такая чудесная
+            девочка, что прям вообще... ты у меня очень красивая киська!! Самая
+            лучшая, умная, и вообще пиздатая девочка, люблю тебя солнце, сияй
+            так же ярко, как ты делаешь это сейчас, а я буду рядышком и пукать
+            хихихи!!!
+          </p>
+        </div>
+      </div>
+
+      <div id="modal">
+        <div id="video-container">
+          <button class="close-btn" id="close1">&times;</button>
+          <video id="video" controls>
+            <source src="video.MP4" type="video/mp4" />
+            Ваш браузер не поддерживает воспроизведение видео.
+          </video>
+        </div>
+      </div>
+      <div class="footer">
+        <audio id="background-music" loop>
+          <source src="tdd.mp3" type="audio/mp3" />
+        </audio>
+        <div id="music-container">
+          <audio id="background-music" loop>
+            <source src="tdd.mp3" type="audio/mp3" />
+          </audio>
+          <button id="toggle-music">🎵</button>
+          <div id="lyrics">Нажми на меня*</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

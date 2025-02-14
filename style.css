@@ -544,3 +544,125 @@ span {
   flex-direction: column;
   align-items: center;
 }
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    width: 80%; /* Уменьшаем ширину карточки на мобильных устройствах */
+  }
+
+  .card-img,
+  .card-img2 {
+    width: 200px; /* Уменьшаем размеры изображений */
+  }
+
+  .slider-container {
+    height: 250px; /* Уменьшаем высоту слайдера */
+  }
+
+  .slider {
+    flex-direction: row; /* Меняем направление слайдов на горизонтальное */
+  }
+
+  .slide {
+    width: 100%; /* Изображения слайдера растягиваются на всю ширину */
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column; /* Располагаем элементы футера вертикально */
+    align-items: center;
+  }
+
+  .gifts {
+    float: none; /* Убираем флоат на мобильных */
+  }
+
+  .gift-title {
+    margin-right: 0;
+  }
+
+  .main {
+    padding: 15px; /* Добавляем отступы для основного контейнера */
+  }
+
+  #modal,
+  #modal2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  iframe {
+    width: 100%; /* Изменяем размер iframe */
+    height: 200px;
+  }
+
+  .text {
+    font-size: 1rem; /* Уменьшаем размер шрифта для мобильных */
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .close-btn {
+    width: 25px; /* Уменьшаем размер кнопки закрытия */
+    height: 25px;
+    font-size: 12px;
+  }
+
+  #toggle-music {
+    margin-left: 20px; /* Уменьшаем отступы на мобильных */
+  }
+
+  #music-container {
+    flex-direction: column; /* Изменяем расположение контейнера для музыки */
+  }
+
+  #lyrics {
+    font-size: 12px; /* Уменьшаем шрифт */
+    margin-left: 0;
+  }
+}
+
+/* Стили для очень маленьких экранов, например, для телефонов с экранами менее 480px */
+@media (max-width: 480px) {
+  .card {
+    width: 90%; /* Уменьшаем ширину карточки */
+  }
+
+  .slider-container {
+    height: 200px; /* Уменьшаем высоту слайдера */
+  }
+
+  iframe {
+    height: 150px; /* Уменьшаем высоту видео */
+  }
+
+  .main .text {
+    font-size: 0.9rem; /* Уменьшаем размер шрифта */
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text:hover {
+    transform: scale(1); /* Отключаем анимацию на мобильных */
+  }
+
+  .slider {
+    flex-direction: column; /* Сделаем слайдер вертикальным */
+  }
+
+  .slide {
+    width: 100%; /* Растягиваем изображения на весь экран */
+  }
+}

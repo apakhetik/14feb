@@ -11,16 +11,12 @@ function openModal() {
     modal.classList.add("active");
     video.currentTime = 0;
     video.play();
-    card.style.zIndex = "1";
-    card2.style.zIndex = "1";
   }
 }
 
 function openModal2() {
   if (!modal2.classList.contains("active")) {
     modal2.classList.add("active");
-    card.style.zIndex = "1";
-    card2.style.zIndex = "1";
   }
 }
 
@@ -29,18 +25,15 @@ function closeModal() {
     modal.classList.remove("active");
     video.pause();
     video.currentTime = 0;
-    card.style.zIndex = "9999";
-    card2.style.zIndex = "9999";
   }
 }
 
 function closeModal2() {
   if (modal2.classList.contains("active")) {
     modal2.classList.remove("active");
-    card.style.zIndex = "9999";
-    card2.style.zIndex = "9999";
   }
 }
+
 card.addEventListener("click", openModal);
 card2.addEventListener("click", openModal2);
 
@@ -59,22 +52,22 @@ modal2.addEventListener("click", e => {
   }
 });
 
-const bodyEl = document.querySelector("body");
+// const bodyEl = document.querySelector("body");
 
-bodyEl.addEventListener("mousemove", event => {
-  const xPos = event.offsetX;
-  const yPos = event.offsetY;
-  const spanEl = document.createElement("span");
-  spanEl.style.left = xPos + "px";
-  spanEl.style.top = yPos + "px";
-  const size = Math.random() * 100;
-  spanEl.style.width = size + "px";
-  spanEl.style.height = size + "px";
-  bodyEl.appendChild(spanEl);
-  setTimeout(() => {
-    spanEl.remove();
-  }, 3000);
-});
+// bodyEl.addEventListener("mousemove", event => {
+//   const xPos = event.offsetX;
+//   const yPos = event.offsetY;
+//   const spanEl = document.createElement("span");
+//   spanEl.style.left = xPos + "px";
+//   spanEl.style.top = yPos + "px";
+//   const size = Math.random() * 50;
+//   spanEl.style.width = size + "px";
+//   spanEl.style.height = size + "px";
+//   bodyEl.appendChild(spanEl);
+//   setTimeout(() => {
+//     spanEl.remove();
+//   }, 3000);
+// });
 
 const audio = document.getElementById("background-music");
 const musicBtn = document.getElementById("toggle-music");
@@ -126,3 +119,26 @@ function autoScroll() {
 }
 
 autoScroll();
+
+const mainBlock = document.getElementById("main1");
+const button = document.getElementById("start");
+
+// Добавляем обработчик события клика
+button.addEventListener("click", () => {
+  // Добавляем класс hidden для скрытия блока
+  mainBlock.classList.add("hidden");
+});
+
+const btnAlbom = document.getElementById("btn-albom");
+const albomMain = document.getElementById("albom_main");
+const close3 = document.getElementById("close3");
+// Добавляем обработчик клика
+btnAlbom.addEventListener("click", () => {
+  // Переключаем видимость блока albom_main
+  albomMain.classList.toggle("visible");
+});
+
+close3.addEventListener("click", () => {
+  // Переключаем видимость блока albom_main
+  albomMain.classList.toggle("visible");
+});
